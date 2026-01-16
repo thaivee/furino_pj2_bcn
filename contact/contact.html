@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniro - Contact</title>
+    <link rel="stylesheet" href="contact.css">
+    <script type="module" src="../login/login.js"></script>
+    <script src="https://kit.fontawesome.com/e1e500606c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="../img/logo.png" alt="Furniro Logo"> <span>Furniro</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="nav-icons">
+            <a href="../login/login.html" title="Login"><i class="fa-solid fa-user"></i></a>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Contact</h1>
+            <p><a href="#">Home</a> > <a href="#">Contact</a></p>
+        </div>
+    </section>
+
+    <main class="contact-container">
+        <div class="contact-header">
+            <h2>Get In Touch With Us</h2>
+            <p>For More Information About Our Product & Services. Please Feel Free To Drop Us An Email. Our Staff Always Be There To Help You Out. Do Not Hesitate!</p>
+        </div>
+
+        <div class="contact-content">
+            <div class="contact-info">
+                <div class="info-item">
+                    <i class="fa-solid fa-map-marker-dot"></i>
+                    <div>
+                        <h3>Address</h3>
+                        <p>236 5th SE Avenue, New York NY10000, United States</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <h3>Phone</h3>
+                        <p>Mobile: +(84) 546-6789<br>Hotline: +(84) 456-6789</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <i class="fa-solid fa-clock"></i>
+                    <div>
+                        <h3>Working Time</h3>
+                        <p>Monday-Friday: 9:00 - 22:00<br>Saturday-Sunday: 9:00 - 21:00</p>
+                    </div>
+                </div>
+            </div>
+
+            <form class="contact-form">
+                <div class="form-group">
+                    <label>Your name</label>
+                    <input type="text" placeholder="Abc">
+                </div>
+                <div class="form-group">
+                    <label>Email address</label>
+                    <input type="email" placeholder="Abc@def.com">
+                </div>
+                <div class="form-group">
+                    <label>Subject</label>
+                    <input type="text" placeholder="This is an optional">
+                </div>
+                <div class="form-group-message">
+                    <label>Message</label>
+                    <textarea placeholder="Hi! I'd like to ask about..."></textarea>
+                </div>
+                <button type="submit" class="btn-submit">Submit</button>
+            </form>
+        </div>
+    </main>
+
+    <section class="features">
+        <div class="feature-item">
+            <i class="fa-solid fa-trophy"></i>
+            <div>
+                <h4>High Quality</h4>
+                <p>crafted from top materials</p>
+            </div>
+        </div>
+        <div class="feature-item">
+            <i class="fa-solid fa-user-shield"></i>
+            <div>
+                <h4>Warranty Protection</h4>
+                <p>Over 2 years</p>
+            </div>
+        </div>
+        <div class="feature-item">
+            <i class="fa-solid fa-truck"></i>
+            <div>
+                <h4>Free Shipping</h4>
+                <p>Order over 150 $</p>
+            </div>
+        </div>
+        <div class="feature-item">
+            <i class="fa-solid fa-headset"></i>
+            <div>
+                <h4>24 / 7 Support</h4>
+                <p>Dedicated support</p>
+            </div>
+        </div>
+    </section>
+
+    <script type="module">
+        import { setupUserIconNavigation } from '../login/login.js';
+        setupUserIconNavigation('../login/');
+    </script>
+</body>
+</html>

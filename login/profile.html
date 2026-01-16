@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniro - My Profile</title>
+    <link rel="stylesheet" href="auth.css">
+    <script type="module" src="profile.js"></script>
+    <script src="https://kit.fontawesome.com/e1e500606c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="../img/logo.png" alt="Furniro Logo"> <span>Furniro</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../contact/contact.html">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="../contact/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="nav-icons">
+            <a href="profile.html" title="My Profile"><i class="fa-solid fa-user"></i></a>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>My Profile</h1>
+            <p><a href="../contact.html">Home</a> > <a href="profile.html">Profile</a></p>
+        </div>
+    </section>
+
+    <main class="profile-container">
+        <div class="profile-header">
+            <h2>Welcome Back!</h2>
+            <p>Manage your account information and preferences</p>
+        </div>
+
+        <div class="profile-card">
+            <div class="profile-avatar">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="profile-info">
+                <h3 id="user-name">Loading...</h3>
+                <p class="email" id="user-email">Loading...</p>
+                
+                <div class="profile-details">
+                    <div class="detail-item">
+                        <span class="detail-label">Member Since:</span>
+                        <span class="detail-value" id="member-since">-</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">User ID:</span>
+                        <span class="detail-value" id="user-id">-</span>
+                    </div>
+                </div>
+
+                <div class="profile-actions">
+                    <a href="../contact/contact.html" class="btn-secondary">Go to Homepage</a>
+                    <button class="btn-logout" id="logout-btn">Logout</button>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <section class="features">
+        <div class="feature-item">
+            <i class="fa-solid fa-trophy"></i>
+            <div>
+                <h4>High Quality</h4>
+                <p>crafted from top materials</p>
+            </div>
+        </div>
+        <div class="feature-item">
+            <i class="fa-solid fa-user-shield"></i>
+            <div>
+                <h4>Warranty Protection</h4>
+                <p>Over 2 years</p>
+            </div>
+        </div>
+        <div class="feature-item">
+            <i class="fa-solid fa-truck"></i>
+            <div>
+                <h4>Free Shipping</h4>
+                <p>Order over 150 $</p>
+            </div>
+        </div>
+        <div class="feature-item">
+            <i class="fa-solid fa-headset"></i>
+            <div>
+                <h4>24 / 7 Support</h4>
+                <p>Dedicated support</p>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
+
