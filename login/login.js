@@ -28,8 +28,8 @@ function redirectToProfile() {
 }
 
 /**
- * @param {Object} user 
- * @param {string} displayName 
+@param {Object} user 
+@param {string} displayName 
  */
 function storeUserInfo(user, displayName = null) {
     localStorage.setItem('userEmail', user.email);
@@ -82,8 +82,7 @@ export function handleUserIconClick(basePath = 'login/') {
 }
 
 /**
- * Sets up the user icon click handler on the page
- * @param {string} basePath - The relative path to the login folder
+ * @param {string} basePath
  */
 export function setupUserIconNavigation(basePath = 'login/') {
     document.addEventListener('DOMContentLoaded', () => {

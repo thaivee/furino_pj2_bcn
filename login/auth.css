@@ -4,7 +4,6 @@
     --primary-color: #B88E2F;
     --text-main: #000000;
     --text-secondary: #9F9F9F;
-    --font-family: 'Poppins', sans-serif;
 }
 
 * {
@@ -14,7 +13,7 @@
 }
 
 body {
-    font-family: var(--font-family);
+    font-family: 'Poppins', sans-serif;
     color: var(--text-main);
 }
 
