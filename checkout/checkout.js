@@ -1,6 +1,25 @@
-// Checkout Page JavaScript
-document.addEventListener('DOMContentLoaded', function() {
+let checkoutInitialized = false;
+
+function initializeCheckout() {
+    if (checkoutInitialized) return;
+    if (typeof window.CartService === 'undefined' || !window.CartService._initialized) return;
+
+    checkoutInitialized = true;
     loadCheckoutItems();
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    initializeCheckout();
+});
+
+window.addEventListener('cartReady', function() {
+    initializeCheckout();
+});
+
+window.addEventListener('cartUpdated', function() {
+    if (checkoutInitialized) {
+        loadCheckoutItems();
+    }
 });
 
 function loadCheckoutItems() {
@@ -10,7 +29,7 @@ function loadCheckoutItems() {
 
     if (!orderItemsContainer) return;
 
-    const items = CartService.getItems();
+    const items = window.CartService.getItems();
     renderOrderItems(items, orderItemsContainer, subtotalEl, totalEl);
 }
 
@@ -28,7 +47,7 @@ function renderOrderItems(items, container, subtotalEl, totalEl) {
             html += `
                 <div class="order-item" data-id="${item.id}">
                     <span>${item.name} <span class="quantity">x ${item.quantity}</span></span>
-                    <span>${CartService.formatPrice(itemSubtotal)}</span>
+                    <span>${window.CartService.formatPrice(itemSubtotal)}</span>
                 </div>
             `;
         });
@@ -36,16 +55,10 @@ function renderOrderItems(items, container, subtotalEl, totalEl) {
 
     container.innerHTML = html;
 
-    if (subtotalEl) subtotalEl.textContent = CartService.formatPrice(total);
-    if (totalEl) totalEl.textContent = CartService.formatPrice(total);
+    if (subtotalEl) subtotalEl.textContent = window.CartService.formatPrice(total);
+    if (totalEl) totalEl.textContent = window.CartService.formatPrice(total);
 }
 
-// Listen for cart updates
-window.addEventListener('cartUpdated', function() {
-    loadCheckoutItems();
-});
-
-// Handle place order button
 document.addEventListener('click', function(e) {
     if (e.target.classList.contains('btn-place-order')) {
         e.preventDefault();
@@ -54,27 +67,20 @@ document.addEventListener('click', function(e) {
 });
 
 function handlePlaceOrder() {
-    // Validate form
     const form = document.querySelector('.billing-form');
     if (!form.checkValidity()) {
         form.reportValidity();
         return;
     }
 
-    // Get cart data
-    const items = CartService.getItems();
+    const items = window.CartService.getItems();
     if (items.length === 0) {
         alert('Your cart is empty!');
         return;
     }
 
-    // Here you would typically send the order to a server
     alert('Order placed successfully! Thank you for your purchase.');
 
-    // Clear cart after successful order
-    CartService.clear();
-
-    // Redirect to home or order confirmation page
+    window.CartService.clear();
     window.location.href = '../index.html';
 }
-

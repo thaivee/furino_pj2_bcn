@@ -8,15 +8,19 @@
     <link rel="stylesheet" href="../component/header/header.css">
     <link rel="stylesheet" href="../component/footer/footer.css">
     <link rel="stylesheet" href="../component/cart-sidebar/cart-sidebar.css">
+    <script src="../component/header/header.js" data-header-base=".."></script>
+    <script>loadHeader('..');</script>
+    <script src="../component/footer/footer.js" data-footer-base=".."></script>
+    <script>loadFooter('..');</script>
+    <script src="checkout.js"></script>
+    <script type="module" src="../component/cart-service.js"></script>
+    <script src="../component/cart-sidebar/cart-sidebar.js"></script>
+    <script>loadCartSidebar('..');</script>
     <script src="https://kit.fontawesome.com/e1e500606c.js" crossorigin="anonymous"></script>
 </head>
 <body>
     <div id="header-placeholder"></div>
-    <script src="../component/header/header.js" data-header-base=".."></script>
-    <script>loadHeader('..');</script>
-    <script src="../component/cart-service.js"></script>
-    <script src="../component/cart-sidebar/cart-sidebar.js"></script>
-    <script>loadCartSidebar('..');</script>
+
 
     <section class="hero">
         <div class="hero-content">
@@ -93,15 +97,14 @@
                     <span>Subtotal</span>
                 </div>
                 <div id="order-items">
-                    <!-- Cart items will be dynamically inserted here -->
                 </div>
                 <div class="order-row">
                     <span>Subtotal</span>
-                    <span id="checkout-subtotal">Rs. 0.00</span>
+                    <span id="checkout-subtotal">0 ₫</span>
                 </div>
                 <div class="order-row total">
                     <span>Total</span>
-                    <span class="total-price" id="checkout-total">Rs. 0.00</span>
+                    <span class="total-price" id="checkout-total">0 ₫</span>
                 </div>
 
                 <div class="payment-methods">
@@ -159,8 +162,6 @@
     </section>
 
     <div id="footer-placeholder"></div>
-    <script src="../component/footer/footer.js" data-footer-base=".."></script>
-    <script>loadFooter('..');</script>
-    <script src="checkout.js"></script>
+
 </body>
 </html>

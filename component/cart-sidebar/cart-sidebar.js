@@ -1,3 +1,5 @@
+let sidebarLoaded = false;
+
 function loadCartSidebar(basePath = '') {
     const sidebarPath = basePath ? `${basePath}/component/cart-sidebar/cart-sidebar.html` : './cart-sidebar/cart-sidebar.html';
 
@@ -11,11 +13,27 @@ function loadCartSidebar(basePath = '') {
             sidebarContainer.id = 'cart-sidebar-container';
             sidebarContainer.innerHTML = data;
             document.body.appendChild(sidebarContainer);
+            sidebarLoaded = true;
             initCartSidebar();
-            renderSidebarCartItems();
+            tryRenderSidebar();
         })
         .catch(error => console.error(error));
 }
+
+function tryRenderSidebar() {
+    if (!sidebarLoaded) return;
+    if (typeof window.CartService !== 'undefined' && window.CartService._initialized) {
+        renderSidebarCartItems();
+    }
+}
+
+window.addEventListener('cartReady', function() {
+    tryRenderSidebar();
+});
+
+window.addEventListener('cartUpdated', function() {
+    tryRenderSidebar();
+});
 
 function initCartSidebar() {
     const overlay = document.getElementById('cart-overlay');
@@ -48,17 +66,13 @@ function initCartSidebar() {
             const cartItem = removeBtn.closest('.cart-item');
             if (cartItem) {
                 const itemId = parseInt(cartItem.dataset.id);
-                if (typeof CartService !== 'undefined') {
-                    CartService.removeItem(itemId);
+                if (typeof window.CartService !== 'undefined') {
+                    window.CartService.removeItem(itemId);
                 }
                 cartItem.remove();
                 updateSidebarSubtotal();
             }
         }
-    });
-
-    window.addEventListener('cartUpdated', function() {
-        renderSidebarCartItems();
     });
 }
 
@@ -67,8 +81,8 @@ function renderSidebarCartItems() {
     if (!cartItemsContainer) return;
 
     let items = [];
-    if (typeof CartService !== 'undefined') {
-        items = CartService.getItems();
+    if (typeof window.CartService !== 'undefined') {
+        items = window.CartService.getItems();
     }
 
     if (items.length === 0) {
@@ -89,7 +103,7 @@ function renderSidebarCartItems() {
                 <img src="${item.image}" alt="${item.name}">
                 <div class="cart-item-details">
                     <h4 class="cart-item-name">${item.name}</h4>
-                    <p class="cart-item-price">${item.quantity} x ${CartService.formatPrice(item.price)}</p>
+                    <p class="cart-item-price">${item.quantity} x ${formatSidebarPrice(item.price)}</p>
                 </div>
                 <button class="cart-item-remove" title="Remove item">
                     <i class="fa-solid fa-circle-xmark"></i>
@@ -103,8 +117,8 @@ function renderSidebarCartItems() {
 }
 
 function formatSidebarPrice(price) {
-    if (typeof CartService !== 'undefined') {
-        return CartService.formatPrice(price);
+    if (typeof window.CartService !== 'undefined') {
+        return window.CartService.formatPrice(price);
     }
     return price.toLocaleString('vi-VN') + ' ₫';
 }
@@ -135,10 +149,10 @@ function closeCartSidebar() {
 function updateSidebarSubtotal() {
     const subtotalEl = document.getElementById('cart-subtotal-price');
 
-    if (typeof CartService !== 'undefined') {
-        const total = CartService.getTotal();
+    if (typeof window.CartService !== 'undefined') {
+        const total = window.CartService.getTotal();
         if (subtotalEl) {
-            subtotalEl.textContent = CartService.formatPrice(total);
+            subtotalEl.textContent = window.CartService.formatPrice(total);
         }
     } else {
         const cartItems = document.querySelectorAll('.cart-item');

@@ -1,14 +1,31 @@
-// Cart Page JavaScript
-document.addEventListener('DOMContentLoaded', function() {
+let cartPageInitialized = false;
+
+function initializeCartPage() {
+    if (cartPageInitialized) return;
+    if (typeof window.CartService === 'undefined' || !window.CartService._initialized) return;
+
+    cartPageInitialized = true;
     loadCartItems();
-    initCartPage();
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    initializeCartPage();
+});
+
+window.addEventListener('cartReady', function() {
+    initializeCartPage();
+});
+
+window.addEventListener('cartUpdated', function() {
+    if (cartPageInitialized) {
+       loadCartItems();
+    }
 });
 
 function loadCartItems() {
     const tableBody = document.getElementById('cart-table-body');
     if (!tableBody) return;
-
-    const items = CartService.getItems();
+    const items = window.CartService.getItems();
 
     if (items.length === 0) {
         showEmptyCart();
@@ -24,11 +41,11 @@ function loadCartItems() {
                     <img src="${item.image}" alt="${item.name}">
                 </td>
                 <td class="cart-product-name">${item.name}</td>
-                <td class="cart-product-price">${CartService.formatPrice(item.price)}</td>
+                <td class="cart-product-price">${window.CartService.formatPrice(item.price)}</td>
                 <td class="cart-product-quantity">
                     <input type="number" value="${item.quantity}" min="1" max="99" class="quantity-input" title="Quantity" aria-label="Quantity">
                 </td>
-                <td class="cart-product-subtotal">${CartService.formatPrice(subtotal)}</td>
+                <td class="cart-product-subtotal">${window.CartService.formatPrice(subtotal)}</td>
                 <td class="cart-product-remove">
                     <button type="button" class="remove-btn" title="Remove item">
                         <i class="fa-solid fa-trash"></i>
@@ -48,7 +65,6 @@ function initCartPage() {
             handleQuantityChange(e);
         }
     });
-
     document.addEventListener('click', function(e) {
         const removeBtn = e.target.closest('.remove-btn');
         if (removeBtn) {
@@ -62,19 +78,15 @@ function handleQuantityChange(e) {
     const row = input.closest('.cart-row');
     const itemId = parseInt(row.dataset.id);
     const quantity = parseInt(input.value);
-
     if (quantity < 1) {
         input.value = 1;
         return;
     }
-
-    CartService.updateQuantity(itemId, quantity);
-
+    window.CartService.updateQuantity(itemId, quantity);
     const price = parseFloat(row.dataset.price);
     const subtotal = price * quantity;
     const subtotalCell = row.querySelector('.cart-product-subtotal');
-    subtotalCell.textContent = CartService.formatPrice(subtotal);
-
+    subtotalCell.textContent = window.CartService.formatPrice(subtotal);
     updateCartTotals();
 }
 
@@ -82,11 +94,10 @@ function handleRemoveItem(removeBtn) {
     const row = removeBtn.closest('.cart-row');
     if (row) {
         const itemId = parseInt(row.dataset.id);
-        CartService.removeItem(itemId);
+        window.CartService.removeItem(itemId);
         row.remove();
         updateCartTotals();
-
-        const items = CartService.getItems();
+        const items = window.CartService.getItems();
         if (items.length === 0) {
             showEmptyCart();
         }
@@ -94,12 +105,11 @@ function handleRemoveItem(removeBtn) {
 }
 
 function updateCartTotals() {
-    const total = CartService.getTotal();
+    const total = window.CartService.getTotal();
     const subtotalEl = document.getElementById('cart-subtotal');
     const totalEl = document.getElementById('cart-total');
-
-    if (subtotalEl) subtotalEl.textContent = CartService.formatPrice(total);
-    if (totalEl) totalEl.textContent = CartService.formatPrice(total);
+    if (subtotalEl) subtotalEl.textContent = window.CartService.formatPrice(total);
+    if (totalEl) totalEl.textContent = window.CartService.formatPrice(total);
 }
 
 function showEmptyCart() {
@@ -115,8 +125,3 @@ function showEmptyCart() {
         `;
     }
 }
-
-window.addEventListener('cartUpdated', function() {
-    loadCartItems();
-});
-
