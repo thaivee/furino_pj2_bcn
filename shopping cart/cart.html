@@ -3,9 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Furniro - Shopping Cart</title>
+    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href="../component/header/header.css">
+    <link rel="stylesheet" href="../component/footer/footer.css">
+    <link rel="stylesheet" href="../component/cart-sidebar/cart-sidebar.css">
+    <script src="https://kit.fontawesome.com/e1e500606c.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    
+    <div id="header-placeholder"></div>
+    <script src="../component/header/header.js"></script>
+    <script>loadHeader('..');</script>
+    <script src="../component/cart-service.js"></script>
+    <script src="../component/cart-sidebar/cart-sidebar.js"></script>
+    <script>loadCartSidebar('..');</script>
+
+    <section class="hero">
+        <div class="hero-content">
+            <img src="../img/logo.png" alt="Furniro Logo">
+            <h1>Cart</h1>
+            <p><a href="../index.html">Home</a> > <a href="cart.html">Cart</a></p>
+        </div>
+    </section>
+
+    <main class="cart-page">
+        <div class="cart-container">
+            <div class="cart-table-wrapper">
+                <table class="cart-table">
+                    <thead>
+                        <tr>
+                            <th class="th-image"><span class="visually-hidden">Image</span></th>
+                            <th>Product</th>
+                            <th>Price</th>
+                            <th>Quantity</th>
+                            <th>Subtotal</th>
+                            <th class="th-action"><span class="visually-hidden">Action</span></th>
+                        </tr>
+                    </thead>
+                    <tbody id="cart-table-body">
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="cart-totals">
+                <h2>Cart Totals</h2>
+                <div class="totals-row">
+                    <span>Subtotal</span>
+                    <span class="totals-value" id="cart-subtotal">Rs. 250,000.00</span>
+                </div>
+                <div class="totals-row totals-total">
+                    <span>Total</span>
+                    <span class="totals-value total-price" id="cart-total">Rs. 250,000.00</span>
+                </div>
+                <a href="../checkout/checkout.html" class="checkout-btn">Check Out</a>
+            </div>
+        </div>
+    </main>
+
+    <section class="features">
+        <div class="feature-item">
+            <i class="fa-solid fa-trophy"></i>
+            <div>
+                <h4>High Quality</h4>
+                <p>crafted from top materials</p>
+            </div>
+        </div>
+        <div class="feature-item">
+            <i class="fa-solid fa-user-shield"></i>
+            <div>
+                <h4>Warranty Protection</h4>
+                <p>Over 2 years</p>
+            </div>
+        </div>
+        <div class="feature-item">
+            <i class="fa-solid fa-truck"></i>
+            <div>
+                <h4>Free Shipping</h4>
+                <p>Order over 150 $</p>
+            </div>
+        </div>
+        <div class="feature-item">
+            <i class="fa-solid fa-headset"></i>
+            <div>
+                <h4>24 / 7 Support</h4>
+                <p>Dedicated support</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+    <script src="../component/footer/footer.js"></script>
+    <script>loadFooter('..');</script>
+    <script src="cart.js"></script>
 </body>
 </html>

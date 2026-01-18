@@ -5,28 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Furniro - Contact</title>
     <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="../component/header/header.css">
+    <link rel="stylesheet" href="../component/footer/footer.css">
+    <link rel="stylesheet" href="../component/cart-sidebar/cart-sidebar.css">
     <script src="https://kit.fontawesome.com/e1e500606c.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="navbar">
-        <div class="logo">
-            <img src="../img/logo.png" alt="Furniro Logo"> <span>Furniro</span>
-        </div>
-        <nav>
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">Shop</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
-        </nav>
-        <div class="nav-icons">
-            <a href="../login/profile.html" title="User"><i class="fa-solid fa-user"></i></a>
-            <i class="fa-solid fa-magnifying-glass"></i>
-            <i class="fa-solid fa-heart"></i>
-            <button type="button" title="Shopping Cart"><i class="fa-solid fa-cart-shopping"></i></button>
-        </div>
-    </header>
+    <div id="header-placeholder"></div>
+    <script src="../component/header/header.js" data-header-base=".."></script>
+    <script>loadHeader('..');</script>
+    <script src="../component/cart-service.js"></script>
+    <script src="../component/cart-sidebar/cart-sidebar.js"></script>
+    <script>loadCartSidebar('..');</script>
 
     <section class="hero">
         <div class="hero-content">
@@ -120,5 +110,8 @@
         </div>
     </section>
 
+    <div id="footer-placeholder"></div>
+    <script src="../component/footer/footer.js" data-footer-base=".."></script>
+    <script>loadFooter('..');</script>
 </body>
 </html>
