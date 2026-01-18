@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    
+}
+section{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    background-color: #FFEFD5;
+}
+
+.container {
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background-color: FFEFD5; */
+    padding: 1rem 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    gap: 3rem;
+
+}
+
+
+.logo-address {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    align-items: center;
+    
+}
+
+.logo img {
+    width: 2.5rem;
+    height: auto;
+}
+
+.text p {
+    color: #9F9F9F;
+    font-size: 1rem;
+    max-width: 19rem;
+}
+
+
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
+    width: fit-content;
+    gap:10rem;
+}
+
+.links, .help, .newsletter {
+    min-width: 5rem;
+    display: flex;
+    flex-direction: column;
+    
+}
+/* .newsletter{
+    max-height: 100%;
+    align-self: center;
+} */
+
+.links p, .help p, .newsletter p {
+    color: #9F9F9F;
+    font-weight: 500;
+    margin-bottom: 2.5rem;
+}
+
+
+.footer-nav a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 2rem;
+    transition: color 0.3s;
+}
+
+.footer-nav a:hover {
+    color: #B88E2F;
+}
+
+.newsletter form {
+    display: flex;
+    gap: 0.5rem;
+    border-bottom: 1px solid #D9D9D9;
+    padding-bottom: 0.2rem;
+}
+
+.newsletter input {
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    flex: 1;
+    background-color: #FFEFD5;
+}
+
+.newsletter button {
+    border: none;
+    background: none;
+    font-weight: 700;
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0.1rem;
+}
+
+
+
+.newsletter button:hover {
+    color: #B88E2F;
+}
+
+hr {
+    border: 0;
+    border-top: 1px solid #D9D9D9;
+    margin-bottom: 1.5rem;
+}
+
+p:last-child {
+    font-size: 1rem;
+    color: #000;
+}
+
+/* responsive */
+
+@media (max-width: 992px) {
+    .header {
+        flex-direction: column;
+    }
+    .footer-nav {
+        justify-content: flex-start;
+        gap: 3rem;
+    }
+}
+
+
+@media (max-width: 600px) {
+    .footer-nav {
+        flex-direction: column;
+        gap: 2rem;
+    }
+    
+    .links p, .help p, .newsletter p {
+        margin-bottom: 1.25rem;
+    }
+    
+    .newsletter form {
+        width: 100%;
+    }
+}
