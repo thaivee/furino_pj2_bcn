@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniro - Checkout</title>
+    <link rel="stylesheet" href="checkout.css">
+    <script src="https://kit.fontawesome.com/e1e500606c.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header class="navbar">
+        <div class="logo">
+            <img src="../img/logo.png" alt="Furniro Logo"> <span>Furniro</span>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Home</a></li>
+                <li><a href="#">Shop</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="../contact/contact.html">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="nav-icons">
+            <a href="../login/profile.html" title="User"><i class="fa-solid fa-user"></i></a>
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <i class="fa-solid fa-heart"></i>
+            <i class="fa-solid fa-cart-shopping"></i>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero-content">
+            <img src="../img/logo.png" alt="Furniro Logo">
+            <h1>Checkout</h1>
+            <p><a href="../index.html">Home</a> > <a href="#">Checkout</a></p>
+        </div>
+    </section>
+
+    <main class="checkout-container">
+        <div class="checkout-content">
+            <div class="billing-details">
+                <h2>Billing details</h2>
+                <form class="billing-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="first-name">First Name</label>
+                            <input placeholder="First Name" type="text" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="last-name">Last Name</label>
+                            <input placeholder="Last Name" type="text" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="company-name">Company Name (Optional)</label>
+                        <input placeholder="Company Name" type="text">
+                    </div>
+                    <div class="form-group">
+                        <label for="country">Country / Region</label>
+                        <select id="country" required>
+                            <option value="Vietnam">Vietnam</option>
+                            <option value="United States">United States</option>
+                            <option value="United Kingdom">United Kingdom</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="street-address">Street address</label>
+                        <input id="street-address" placeholder="Street address" type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="town-city">Town / City</label>
+                        <input placeholder="Town / City" type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="province">Province</label>
+                        <select id="province" required>
+                            <option value="Western Province">Western Province</option>
+                            <option value="Central Province">Central Province</option>
+                            <option value="Southern Province">Southern Province</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="zip-code">ZIP code</label>
+                        <input placeholder="12000" type="text" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Phone</label>
+                        <input id="phone" placeholder="0123456789" type="tel" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email-address">Email address</label>
+                        <input placeholder="abc@gmail.com" type="email" required>
+                    </div>
+                    <div class="form-group">
+                        <textarea placeholder="Additional information" rows="4"></textarea>
+                    </div>
+                </form>
+            </div>
+
+            <div id="order-summary" class="order-summary">
+                <div class="order-header">
+                    <span>Product</span>
+                    <span>Subtotal</span>
+                </div>
+                <div class="order-item">
+                    <span>Asgaard sofa <span class="quantity">x 1</span></span>
+                    <span>Rs. 250,000.00</span>
+                </div>
+                <div class="order-row">
+                    <span>Subtotal</span>
+                    <span>Rs. 250,000.00</span>
+                </div>
+                <div class="order-row total">
+                    <span>Total</span>
+                    <span class="total-price">Rs. 250,000.00</span>
+                </div>
+
+                <div class="payment-methods">
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="bank" checked>
+                        <span>Direct Bank Transfer</span>
+                    </label>
+                    <p class="payment-description">
+                        Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order will not be shipped until the funds have cleared in our account.
+                    </p>
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="bank2">
+                        <span>Direct Bank Transfer</span>
+                    </label>
+                    <label class="payment-option">
+                        <input type="radio" name="payment" value="cod">
+                        <span>Cash On Delivery</span>
+                    </label>
+                </div>
+
+                <p class="privacy-text">
+                    Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <a href="#">privacy policy</a>.
+                </p>
+
+                <button type="submit" class="btn-place-order">Place order</button>
+            </div>
+        </div>
+    </main>
+
+    <section class="features">
+        <div class="feature-item">
+            <i class="fa-solid fa-trophy"></i>
+            <div>
+                <h4>High Quality</h4>
+                <p>crafted from top materials</p>
+            </div>
+        </div>
+        <div class="feature-item">
+            <i class="fa-solid fa-user-shield"></i>
+            <div>
+                <h4>Warranty Protection</h4>
+                <p>Over 2 years</p>
+            </div>
+        </div>
+        <div class="feature-item">
+            <i class="fa-solid fa-truck"></i>
+            <div>
+                <h4>Free Shipping</h4>
+                <p>Order over 150 $</p>
+            </div>
+        </div>
+        <div class="feature-item">
+            <i class="fa-solid fa-headset"></i>
+            <div>
+                <h4>24 / 7 Support</h4>
+                <p>Dedicated support</p>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
+
