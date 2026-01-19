@@ -99,7 +99,7 @@ body{
 }
 
 
-.action{
+.action-icon{
     height: fit-content;
     width: fit-content;
     display: flex;
@@ -148,7 +148,6 @@ body{
     
 }
 
-<<<<<<< HEAD
 .mobile-menu-btn {
     display: none;
     flex-direction: column;
@@ -259,11 +258,6 @@ body{
 @media (max-width: 480px) {
     .header-container {
         padding: 0.75rem 1rem;
-=======
-@media (max-width: 1024px) {
-    .container {
-        width: 95%;
->>>>>>> 037bc39ab56887fd3fa353a7d40e0b7e4dd5320d
     }
 
     .logo-text {
