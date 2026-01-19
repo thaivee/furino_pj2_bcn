@@ -19,7 +19,7 @@ section{
     background-color: #FFEFD5;
 }
 
-.container {
+.container-footer {
     width: 80%;
     height: fit-content;
     display: flex;
@@ -29,7 +29,7 @@ section{
     padding: 1rem 0;
 }
 
-.header {
+.header-footer {
     display: flex;
     justify-content: space-between;
     /* align-items: center; */
@@ -146,30 +146,48 @@ p:last-child {
     color: #000;
 }
 
-/* responsive */
-
-@media (max-width: 992px) {
-    .header {
-        flex-direction: column;
+@media (max-width: 64rem) { 
+    .header-footer {
+        flex-wrap: wrap; 
     }
+
+    .logo-address {
+        flex: 0 0 100%;
+        margin-bottom: 2rem;
+    }
+
     .footer-nav {
-        justify-content: flex-start;
-        gap: 3rem;
+        flex: 0 0 100%;
     }
 }
 
+@media (max-width: 22.5rem) { 
+    .container-footer {
+        padding: 2rem 1rem;
+    }
 
-@media (max-width: 600px) {
+    .header-footer {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
     .footer-nav {
         flex-direction: column;
-        gap: 2rem;
+        gap: 2.5rem;
     }
-    
-    .links p, .help p, .newsletter p {
-        margin-bottom: 1.25rem;
-    }
-    
+
     .newsletter form {
-        width: 100%;
+        flex-direction: column;
+        border-bottom: none;
+    }
+
+    .newsletter input {
+        border-bottom: 1px solid #000000;
+        padding: 0.5rem 0;
+    }
+
+    .newsletter button {
+        width: fit-content;
+        margin-top: 1rem;
     }
 }

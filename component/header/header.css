@@ -1,5 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
+:root{
+    --button: #B88E2F;
+    --button-hover: #e8d2a9;
+    --button-medium-hover: #7C6838;
+    --background-color: #FFEFD5;
+}
 * {
     margin: 0;
     padding: 0;
@@ -9,18 +15,19 @@ body{
     font-family: 'Poppins', sans-serif;
 }
 .container{
-    min-width: 80%;
+    width: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0.5rem 0;
 }
 .header{
-    background-color: #FFEFD5;
+    background-color: var(--background-color);
     min-width: 100%;
     height: fit-content;
     display: flex;
     justify-content: center;
+    padding: 0.5rem 0;
 
 }
 .logo{
@@ -39,7 +46,6 @@ body{
 
 .logo-text{
     text-decoration: none;
-    font-family: sans-serif;
     font-weight: 750;
     font-size: 25;
     color: #000000;
@@ -65,9 +71,7 @@ body{
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    font-size: 15;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 200;
+    font-weight: 400;
     /* color: #F5FFFA; */
     color:#000000;
     cursor: pointer;
@@ -76,18 +80,17 @@ body{
 .button-medium{
     width: 5.5rem;
     min-height: 2.5rem;
-    background-color: 	#E9967A;
+    background-color: var(--button);
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 30px;
     justify-content: center;
     align-items: center;
-    text-decoration: none;
+    border: none;
     font-size: 15;
-    font-family: Arial, Helvetica, sans-serif;
     font-weight: 200;
-    color: F5FFFA;
+    color: #F5FFFA;
     cursor: pointer;
 }
 
@@ -116,14 +119,14 @@ body{
 
 
 .button:hover{
-    background-color: #e8b7a7;
+    background-color: var(--button-hover);
 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     color: #000000;
     transition: all 0.3s ease;
 }
 .button-medium:hover{
-    background-color: #D2691E;
+    background-color: var(--button-medium-hover);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     color: #ffffff;
     transition: all 0.3s ease;
@@ -139,4 +142,85 @@ body{
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     color: #000000;
     
+}
+
+
+@media (max-width: 64rem) { 
+    .container {
+        width: 90%;
+    }
+
+    .logo-text {
+        font-size: 1.25rem;
+    }
+
+    .nav {
+        gap: 0.5rem; 
+    }
+
+    .button {
+        width: 4rem;
+        font-size: 0.875rem; 
+    }
+
+    .action {
+        gap: 0.5rem;
+    }
+}
+
+
+
+@media (max-width: 22.5rem) {
+    .header {
+        padding: 0.3125rem 0; 
+    }
+
+    .container {
+        flex-direction: column;
+        gap: 8px; 
+        padding: 0.3125rem 0;
+    }
+    .logo-text {
+        font-size: 1.25rem !important;
+    }
+    .logo-text img {
+        width: 1.5rem; 
+        height: 1.5rem;
+    }
+
+
+    .nav {
+        width: 100%;
+        justify-content: center;
+        gap: 0.75rem; 
+    }
+
+    .button {
+        font-size: 0.75rem; 
+        width: auto;
+        min-height: auto;
+        padding: 0.125rem 0.3125rem;
+    }
+
+
+    .action {
+        width: 100%;
+        justify-content: center;
+        gap:0.75rem;
+        margin-top: 0.1rem;
+    }
+
+    .icon {
+        font-size: 1rem;
+        width: 2rem;
+        height: 2rem;
+    }
+
+    .button-medium {
+        width: auto;
+        min-height: 1.75rem;
+        padding: 0 0.75rem;
+        font-size: 0.75rem;
+        background-color: var(--button);
+    }
 }
