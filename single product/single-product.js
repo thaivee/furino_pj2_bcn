@@ -1,9 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-<<<<<<< HEAD
-
-=======
-    
->>>>>>> 037bc39ab56887fd3fa353a7d40e0b7e4dd5320d
     const loadComponent = (id, path) => {
         const element = document.getElementById(id);
         if (element) {
@@ -12,23 +7,16 @@ document.addEventListener("DOMContentLoaded", () => {
                 .then(data => {
                     element.innerHTML = data;
                 })
-<<<<<<< HEAD
                 .catch(err => console.error("Error loading component:", err));
-=======
-                .catch(err => console.error("Lỗi tải component:", err));
->>>>>>> 037bc39ab56887fd3fa353a7d40e0b7e4dd5320d
         }
     };
 
     loadComponent('header-placeholder', '/component/header/header.html');
     loadComponent('footer-placeholder', '/component/footer/footer.html');
-<<<<<<< HEAD
 
     loadProductFromUrl();
     loadRelatedProducts();
 
-=======
->>>>>>> 037bc39ab56887fd3fa353a7d40e0b7e4dd5320d
     const mainImg = document.getElementById('main-product-img');
     const thumbnails = document.querySelectorAll('.img-small img');
 
@@ -41,10 +29,6 @@ document.addEventListener("DOMContentLoaded", () => {
             });
         });
     }
-<<<<<<< HEAD
-
-=======
->>>>>>> 037bc39ab56887fd3fa353a7d40e0b7e4dd5320d
     const qtyInput = document.getElementById('quantity-input');
     const btnDecrease = document.getElementById('decrease-qty');
     const btnIncrease = document.getElementById('increase-qty');
@@ -60,7 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-<<<<<<< HEAD
     const addToCartBtn = document.getElementById('add-to-cart-btn');
     if (addToCartBtn) {
         addToCartBtn.addEventListener('click', () => {
@@ -69,8 +52,6 @@ document.addEventListener("DOMContentLoaded", () => {
             addToCart(addToCartBtn, quantity);
         });
     }
-=======
->>>>>>> 037bc39ab56887fd3fa353a7d40e0b7e4dd5320d
 
     const setupActive = (selector) => {
         const buttons = document.querySelectorAll(selector);
@@ -85,17 +66,12 @@ document.addEventListener("DOMContentLoaded", () => {
     setupActive('.size-text');
     setupActive('.colour');
 
-<<<<<<< HEAD
-=======
-
->>>>>>> 037bc39ab56887fd3fa353a7d40e0b7e4dd5320d
     const viewMoreBtn = document.querySelector('.button-viewmore');
     if (viewMoreBtn) {
         viewMoreBtn.addEventListener('click', () => {
             window.location.href = '../shop/shop.html';
         });
     }
-<<<<<<< HEAD
 });
 
 function getProductIdFromUrl() {
@@ -185,6 +161,3 @@ function loadRelatedProducts() {
         `;
     }).join('');
 }
-=======
-});
->>>>>>> 037bc39ab56887fd3fa353a7d40e0b7e4dd5320d
