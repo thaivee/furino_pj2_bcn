@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furito - Shop</title>
+    <link rel="icon" href="/img/logo.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="/component/footer/footer.css">
+    <link rel="stylesheet" href="/component/header/header.css">
+    <link rel="stylesheet" href="./shop.css">
+    <script src="/component/header/header.js" defer></script>
+    <script src="/component/footer/footer.js" defer></script>
+    <script src="./shop.js"></script>
+</head>
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <section class="view1-shop">
+        <div class="container-view1-shop">
+            <h1>Shop</h1>
+            <div class="nav-view1">
+                <a href="/index.html">Home</a>
+                <i class="fa-solid fa-angle-right"></i>
+                <a href="./shop.html">Shop</a>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="shop-toolbar">
+        <div class="toolbar-container"> 
+            <div class="toolbar-left">
+                    <button class="btn-filter" id="filter-btn">
+                        <i class="fa-solid fa-arrow-down-a-z"></i> Filter
+                    </button>
+                    <div class="view-mode">
+                        <button class="icon-grid active"></button>
+                        <button class="icon-list"></button>
+                    </div>
+                    <span class="divider">|</span>
+                    <span class="result-text">Showing 1–16 of 32 results</span>
+                </div>
+
+                <div class="search-wrapper">
+                    <div class="search-box">
+                        <input type="text" placeholder="Search products..." id="product-search">
+                        <button type="submit">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                        </button>
+                    </div>
+                </div>
+
+                
+                <div class="toolbar-right">
+                    <div class="control-item">
+                        <label>Show</label>
+                        <input type="number" value="16" class="input-small">
+                    </div>
+                    <div class="control-item">
+                        <label>Short by</label>
+                        <select class="select-sort" id="sort-select">
+                            <option value="Default">Default</option>
+                            <option value="Dining">Dining</option>
+                            <option value="Living">Living</option>
+                            <option value="Bedroom">Bedroom</option>
+                        </select>
+                    </div>
+                </div>
+        </div>      
+    </section>
+
+    <section class="view2-shop">
+        <div class="container-view2-shop">
+            
+
+
+
+
+            <div id="product-grid" class="product-shop">
+                <div class="card-sale">
+                        <img src="/img/image 1.png">
+                        <div class="circle">50%</div>
+                        <div class="in4">
+                            <h5>Syltherine</h5>
+                            <p>Stylish cafe chair</p>
+                            <div>
+                            <h6>Rp 2.500.000</h6>   
+                            <p>Rp 3.500.000</p>
+                            </div>
+                        </div>
+                        <div class="card-hover">
+                        <button>Add to cart</button>
+                        <div class="action">
+                            <a href="#">Share</a>
+                            <a href="#">Compare</a>
+                            <a href="#">Like</a>
+                        </div>
+                    </div>
+                </div>
+                
+
+                <div class="card">
+                    <img src="/img/image 2.png">
+                    <div class="in4">
+                        <h5>Syltherine</h5>
+                        <p>Stylish cafe chair</p>
+                        <div>
+                            <h6>Rp 2.500.000</h6>   
+                            <p>Rp 3.500.000</p>
+                        </div>
+                    </div>
+                    <div class="card-hover">
+                        <button>Add to cart</button>
+                        <div class="action">
+                            <a href="#">Share</a>
+                            <a href="#">Compare</a>
+                            <a href="#">Like</a>
+                        </div>
+                    </div>
+                </div>
+                
+                
+                <div class="card-new">
+                    <img src="/img/image 3.png">
+                    <div class="circle">New</div>
+                        <div class="in4">
+                            <h5>Syltherine</h5>
+                            <p>Stylish cafe chair</p>
+                            <div>
+                                <h6>Rp 2.500.000</h6>   
+                                <p>Rp 3.500.000</p>
+                            </div>
+                        </div>
+                        <div class="card-hover">
+                        <button>Add to cart</button>
+                        <div class="action">
+                            <a href="#">Share</a>
+                            <a href="#">Compare</a>
+                            <a href="#">Like</a>
+                        </div>
+                    </div>
+                </div>
+
+                
+
+                
+                
+
+            </div>
+
+
+            <div class="pagination">
+                <a class="page-btn active" href="./shop.html">1</a>
+                <a class="page-btn" href="./shop.html">2</a>
+                <a class="page-btn" href="./shop.html">3</a>
+                <a class="page-btn next" href="./shop.html">Next</a>
+            </div>
+
+        </div>
+    </section>
+
+
+    <section class="features-section">
+        <div class="features-container">
+            <div class="feature-item">
+                <i class="fa-solid fa-trophy feature-icon"></i>
+                <div class="feature-text">
+                    <h3>High Quality</h3>
+                    <p>crafted from top materials</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <i class="fa-solid fa-circle-check feature-icon"></i>
+                <div class="feature-text">
+                    <h3>Warranty Protection</h3>
+                    <p>Over 2 years</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <i class="fa-solid fa-truck-fast feature-icon"></i>
+                <div class="feature-text">
+                    <h3>Free Shipping</h3>
+                    <p>Order over 15000 $</p>
+                </div>
+            </div>
+
+            <div class="feature-item">
+                <i class="fa-solid fa-headset feature-icon"></i>
+                <div class="feature-text">
+                    <h3>7 / 24 Support</h3>
+                    <p>Dedicated support</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div id="footer-placeholder"></div>
+</body>
+</html>

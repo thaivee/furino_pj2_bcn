@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    fetch('./component/footer/footer.html')
+    fetch('/component/footer/footer.html')
         .then(response => {
             if (!response.ok) throw new Error("Error loading footer");
             return response.text();

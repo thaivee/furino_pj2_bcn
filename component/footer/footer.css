@@ -11,8 +11,7 @@ body {
     font-family: 'Poppins', sans-serif;
     
 }
-
-.footer{
+section{
     display: flex;
     justify-content: center;
     width: 100%;
@@ -26,15 +25,125 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 4rem;
-    align-items: center;
+    /* background-color: FFEFD5; */
+    padding: 1rem 0;
 }
 
 .header-footer {
     display: flex;
     justify-content: space-between;
+    /* align-items: center; */
+    gap: 3rem;
+
+}
+
+
+.logo-address {
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.logo-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: #000;
+    display: flex;
     align-items: center;
-    gap: 5rem;
+    
+}
+
+.logo img {
+    width: 2.5rem;
+    height: auto;
+}
+
+.text p {
+    color: #9F9F9F;
+    font-size: 1rem;
+    max-width: 19rem;
+}
+
+.information {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+    gap: 2rem;
+    margin-bottom: 3rem;
+}
+.footer-nav {
+    display: flex;
+    justify-content: space-between;
+    width: fit-content;
+    gap:10rem;
+}
+
+.links, .help, .newsletter {
+    min-width: 5rem;
+    display: flex;
+    flex-direction: column;
+    
+}
+/* .newsletter{
+    max-height: 100%;
+    align-self: center;
+} */
+
+.links p, .help p, .newsletter p {
+    color: #9F9F9F;
+    font-weight: 500;
+    margin-bottom: 2.5rem;
+}
+
+
+.footer-nav a {
+    text-decoration: none;
+    color: #000000;
+    font-weight: 500;
+    display: block;
+    margin-bottom: 2rem;
+    transition: color 0.3s;
+}
+
+.footer-nav a:hover {@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: 'Poppins', sans-serif;
+    
+}
+section{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: fit-content;
+    background-color: #FFEFD5;
+}
+
+.container-footer {
+    width: 80%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    /* background-color: FFEFD5; */
+    padding: 1rem 0;
+}
+
+.header-footer {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    gap: 3rem;
+
 }
 
 
@@ -80,6 +189,10 @@ body {
     flex-direction: column;
     
 }
+/* .newsletter{
+    max-height: 100%;
+    align-self: center;
+} */
 
 .links p, .help p, .newsletter p {
     color: #9F9F9F;
@@ -116,9 +229,9 @@ body {
     background-color: #FFEFD5;
 }
 
-.newsletter button {
+form button {
     border: none;
-    background: none;
+    background: #B88E2F;
     font-weight: 700;
     cursor: pointer;
     font-size: 0.9rem;
@@ -142,48 +255,69 @@ p:last-child {
     color: #000;
 }
 
-@media (max-width: 64rem) { 
-    .header-footer {
-        flex-wrap: wrap; 
+/* responsive */
+
+@media (max-width: 64rem) {
+    .container-footer {
+        width: 90%;
+    }
+
+    .information {
+        gap: 2rem;
+    }
+
+    .footer-nav {
+        gap: 1.5rem;
     }
 
     .logo-address {
-        flex: 0 0 100%;
-        margin-bottom: 2rem;
-    }
-
-    .footer-nav {
-        flex: 0 0 100%;
+        max-width: 14rem;
     }
 }
 
-@media (max-width: 22.5rem) { 
+/* =========================================
+   3. MOBILE (360px / 22.5rem)
+   ========================================= */
+@media (max-width: 22.5rem) {
     .container-footer {
-        padding: 2rem 1rem;
+        width: 95%;
+        text-align: center;
     }
 
-    .header-footer {
+    /* Xếp chồng theo chiều dọc trên mobile */
+    .information {
         flex-direction: column;
+        align-items: center;
         gap: 3rem;
+    }
+
+    .logo-text {
+        justify-content: center;
     }
 
     .footer-nav {
         flex-direction: column;
+        width: 100%;
         gap: 2.5rem;
+    }
+
+    .links, .help, .newsletter {
+        align-items: center;
     }
 
     .newsletter form {
         flex-direction: column;
-        border-bottom: none;
+        width: 100%;
+        gap: 1.5rem;
     }
 
     .newsletter input {
-        border-bottom: 1px solid #000000;
-        padding: 0.5rem 0;
+        width: 100%;
+        text-align: center;
     }
 
-    .newsletter button {
-        width: fit-content;
-        margin-top: 1rem;
+    hr {
+        margin: 2rem 0 1rem 0;
     }
+}
 }

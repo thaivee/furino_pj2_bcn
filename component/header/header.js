@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    fetch('./component/header/header.html')
+    fetch('/component/header/header.html')
         .then(response => {
             if (!response.ok) throw new Error("Error loading header");
             return response.text();
