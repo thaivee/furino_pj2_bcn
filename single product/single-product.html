@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furito - Product</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" href="/component/header/header.css">
+    <link rel="stylesheet" href="/component/footer/footer.css">
+    <link rel="stylesheet" href="/component/cart-sidebar/cart-sidebar.css">
+    <link rel="stylesheet" href="./single-product.css">
+    <link rel="icon" href="../img/logo.png">
+    <script type="module" src="/component/cart-service.js"></script>
+    <script src="/component/header/header.js" defer></script>
+    <script src="/component/footer/footer.js" defer></script>
+    <script src="/component/cart-sidebar/cart-sidebar.js"></script>
+    <script src="/component/products.js"></script>
+    <script src="/component/cart-utils.js"></script>
+    <script src="./single-product.js"></script>
+    <script>loadCartSidebar('..');</script>
+    <script>loadHeader('..');</script>
+    <script>loadFooter('..');</script>
+</head>
+<body>
+    <div id="header-placeholder"></div>
+    <div id="cart-sidebar-placeholder"></div>
+    <section class="view1-product">
+        <div class="view1-product-container">
+            <a href="../index.html">Home</a>
+            <i class="fa-solid fa-angle-right"></i>
+            <a href="../shop/shop.html">Shop</a>
+            <i class="fa-solid fa-angle-right"></i>
+            <span>|</span>
+            <span id="breadcrumb-product-name">Product</span>
+        </div>
+    </section>
+
+    <section class="view2-product">
+        <div class="view2-product-container">
+            <div class="img">
+                <div class="img-small">
+                    <img src="/img/Mask group1.png" alt="img">
+                    <img src="/img/Mask group2.png" alt="img">
+                    <img src="/img/Mask group3.png" alt="img">
+                    <img src="/img/Mask group4.png" alt="img">
+                </div>
+                <div class="img-large" >
+                    <img src="/img/sofa.png" alt="img" id="main-product-img">
+                </div>
+            </div>
+            <div class="information-product">
+                <h1 id="product-name">Loading...</h1>
+                <h5 id="product-price">VND 0</h5>
+                <div class="star">
+                    <div class="icon-star">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                    </div>
+                    <p>5 Customer Review</p>
+                </div>
+
+                <p id="product-description">
+                    Loading product description...
+                </p>
+
+                <div class="size">
+                    <p>Size</p>
+                    <div class="size-button">
+                        <button type="button" class="size-text">L</button>
+                        <button type="button" class="size-text">XL</button>
+                        <button type="button" class="size-text">XXL</button>
+                    </div>
+                </div>
+
+                <div class="color">
+                    <p>Color</p>
+                    <div class="color-button">
+                        <button type="button" title="Purple" class="colour" id="purple"></button>
+                        <button type="button" title="Black" class="colour" id="black"></button>
+                        <button type="button" title="Yellow" class="colour" id="yellow"></button>
+                    </div>
+                </div>
+
+
+                <div class="information-nav">
+                    <div class="quantity-control">
+                        <button class="qty-btn" type="button" id="decrease-qty">-</button>
+                        <input title="input" type="number" value="1" class="qty-input" id="quantity-input" readonly>
+                        <button class="qty-btn" type="button" id="increase-qty">+</button>
+                    </div>
+
+                    <button type="button" class="add" id="add-to-cart-btn" data-product-id="">Add To Cart</button>
+
+                </div>
+                <hr>
+                <div class="product-about">
+                    <table>
+                        <tr>
+                            <td>SKU</td>
+                            <td>: SS001</td>
+                        </tr>
+                        <tr>
+                            <td>Category</td>
+                            <td>: Sofa</td>
+                        </tr>
+                        <tr>
+                            <td>Tag</td>
+                            <td>: Sofa, Chair, Home, Shop</td>
+                        </tr>
+                        <tr>
+                            <td>Share</td>
+                            <td>
+                                : <i class="fa-brands fa-facebook"></i> 
+                                <i class="fa-brands fa-linkedin"></i>
+                                <i class="fa-brands fa-twitter"></i>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="view3-product">
+        <div class="view3-product-container">
+            <h2>Description</h2>
+            <p>
+                Embodying the raw, wayward spirit of rock ‘n’ roll, the Kilburn portable active stereo speaker takes the unmistakable look and sound of Marshall, unplugs the chords, and takes the show on the road.
+            </p>
+            <p>
+                Weighing in under 7 pounds, the Kilburn is a lightweight piece of vintage styled engineering. Setting the bar as one of the loudest speakers in its class, the Kilburn is a compact, stout-hearted hero with a well-balanced audio which boasts a clear midrange and extended highs for a sound that is both articulate and pronounced. The analogue knobs allow you to fine tune the controls to your personal preferences while the guitar-influenced leather strap enables easy and stylish travel.
+            </p>
+            <div class="view3-img">
+                <img src="/img/Mask group5.png" alt="img">
+                <img src="/img/Mask group6.png" alt="img">
+            </div>
+        </div>
+    </section>
+
+
+    <section class="view4-product">
+        <div class="view4-product-container">
+            <h2>Related Products</h2>
+            <div class="view4-card" id="related-products-grid">
+            </div>
+
+            <button type="button" class="button-viewmore">View More</button>
+        </div>
+    </section>
+
+
+
+    
+    
+    <div id="footer-placeholder"></div>
+</body>
+</html>

@@ -1,0 +1,486 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+:root{
+    --button: #B88E2F;
+    --button-hover: #7C6838;
+    --background-color: #FFEFD5;
+    --text-gray:#333333;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--text-main);
+    line-height: 1.5;
+}
+
+
+.view1-shop {
+    background-image: linear-gradient(rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.3)), url('/img/shop-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 0;
+    text-align: center;
+}
+
+.view1-shop h1 {
+    font-size: 3rem; 
+    font-weight: 500;
+}
+
+.nav-view1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1rem;
+}
+
+.nav-view1 a {
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+}
+
+.nav-view1 a:last-child {
+    font-weight: 300;
+}
+
+
+.shop-toolbar {
+    background-color: #ffffff;
+    padding: 1.5rem 0;
+    width: 100%;
+
+}
+
+
+.toolbar-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    gap: 2rem;
+}
+
+.toolbar-left {
+    display: flex;
+    align-items: center;
+    gap: 1.25rem;
+    flex-shrink: 0; 
+}
+
+.btn-filter {
+    background: none; 
+    border: none;
+    cursor: pointer; 
+    font-size: 1.125rem;
+    display: flex; 
+    align-items: center; 
+    gap: 0.5rem;
+}
+
+.view-mode { 
+    display: flex; 
+    gap: 0.625rem; 
+}
+.view-mode button { 
+    background: none; 
+    border: none; 
+    cursor: pointer; 
+    font-size: 1.25rem; 
+}
+
+.divider { 
+    color: #9F9F9F; 
+    font-size: 1.5rem; 
+}
+.result-text { 
+    font-size: 0.9375rem; 
+}
+
+
+.search-wrapper {
+    flex: 1; 
+    display: flex;
+    justify-content: center;
+}
+
+.search-box {
+    display: flex;
+    width: 100%;
+    max-width: 20rem;
+    background: #FFFFFF;
+    border: 1.5px solid var(--button);
+    border-radius: 50px;
+    overflow: hidden;
+    height: 2.5rem; 
+}
+
+.search-box input {
+    flex: 1; 
+    border: none; 
+    outline: none;
+    padding: 0 1rem; 
+    font-size: 0.875rem;
+    background: transparent;
+}
+
+.search-box button {
+    background: var(--button); 
+    color: #FFFFFF;
+    border: none; 
+    padding: 0 1.25rem; 
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.search-box button:hover { 
+    background: var(--button-hover); 
+}
+
+
+
+.toolbar-right {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    flex-shrink: 0;
+}
+
+.control-item { 
+    display: flex; 
+    align-items: center; 
+    gap: 0.5rem; 
+}
+.control-item label { 
+    font-size: 1rem; 
+}
+
+.input-small, .select-sort {
+    border: 1px solid var(--button); 
+    border-radius: 0.5rem;
+    outline: none; 
+    padding: 0.5rem;
+    background: #FFFFFF; font-size: 0.875rem;
+}
+
+.input-small { 
+    width: 3rem; 
+    text-align: center; 
+}
+.select-sort { 
+    width: 8rem; 
+}
+
+
+
+.view2-shop {
+    padding: 4rem 0;
+}
+
+.container-view2-shop {
+    width: 80%;
+    
+    margin: 0 auto;
+}
+
+.product-shop {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    
+    gap: 2rem;
+}
+
+
+
+.card, .card-sale, .card-new {
+    position: relative;
+    background-color: #F4F5F7;
+    transition: transform 0.3s;
+}
+
+.card img, .card-sale img, .card-new img {
+    width: 100%;
+    height: 18.75rem;
+    
+    object-fit: cover;
+}
+
+
+.circle {
+    position: absolute;
+    top: 1.5rem; 
+    right: 1.5rem;
+    width: 3rem; 
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    color: #FFF;
+    z-index: 2;
+}
+.card-sale .circle { 
+    background-color: #E97171; 
+}
+.card-new .circle { 
+    background-color: #2EC1AC; 
+}
+
+.in4 { 
+    padding: 1rem; 
+}
+.in4 h5 { 
+    font-size: 1.5rem; 
+    font-weight: 600;
+    margin-bottom: 0.5rem; 
+}
+.in4 p { 
+    color: var(--text-gray); 
+    font-size: 1rem; 
+    margin-bottom: 0.5rem; 
+}
+.in4 div { 
+    display: flex; 
+    gap: 1rem; 
+    align-items: center; 
+}
+.in4 h6 { 
+    font-size: 1.25rem; 
+    font-weight: 600; 
+}
+.in4 div p { 
+    text-decoration: line-through; 
+    font-size: 0.875rem; 
+    color: #B0B0B0; 
+}
+
+
+.card-hover {
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    background-color: rgba(58, 58, 58, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.3s;
+    gap: 1.5rem;
+    z-index: 5;
+}
+
+.card:hover .card-hover, .card-sale:hover .card-hover, .card-new:hover .card-hover {
+    opacity: 1;
+}
+
+.card-hover button {
+    background: #ffffff;
+    color: var(--button);
+    border: none;
+    padding: 0.75rem 3rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.action { 
+    display: flex; 
+    gap: 1.25rem; 
+}
+.action a { 
+    color: #FFF; 
+    text-decoration: none; 
+    font-size: 0.875rem; 
+}
+
+
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin-top: 4rem;
+}
+
+.page-btn {
+    width: 3.75rem; height: 3.75rem;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    border-radius: 0.625rem;
+    text-decoration: none;
+    color: #000;
+    font-size: 1.25rem;
+    transition: 0.3s;
+}
+
+.page-btn.active, .page-btn:hover {
+    background-color: var(--button);
+    color: #FFF;
+}
+
+.page-btn.next { 
+    width: 6.25rem; 
+}
+
+
+
+.features-section {
+    background-color: #FAF3EA;
+    padding: 5rem 0; 
+    
+}
+
+.features-container {
+    width: 80%;
+    
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.feature-icon {
+    font-size: 2.5rem; 
+    
+}
+
+.feature-text h3 { 
+    font-size: 1.25rem; 
+    font-weight: 600; 
+}
+.feature-text p { 
+    color: var(--text-gray); 
+    font-size: 1rem; 
+}
+
+
+
+
+@media (max-width: 64rem) {
+    
+    .view1-shop { 
+        padding: 4rem 0; 
+    }
+    .view1-shop h1 { 
+        font-size: 2.5rem; 
+    }
+
+
+    .toolbar-container, .container-view2-shop, .features-container {
+        max-width: 90%; 
+    }
+    
+    .search-wrapper { 
+        max-width: 18rem; 
+    } 
+
+    
+    .product-shop {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+   
+    .features-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 22.5rem) {
+   
+    .view1-shop { 
+        padding: 2.5rem 0; 
+    }
+    .view1-shop h1 { 
+        font-size: 1.8rem; 
+    }
+
+    
+    .toolbar-container {
+        flex-direction: column; 
+        width: 95%;
+        gap: 1.25rem;
+    }
+
+    .toolbar-left, .toolbar-right, .search-wrapper {
+        width: 100%;
+        justify-content: center;
+    }
+
+    
+    .search-wrapper { 
+        order: -1; 
+    }
+    .search-box { 
+        max-width: 100%; 
+        height: 2.8rem; 
+    }
+    
+    .divider { 
+        display: none; 
+    }
+
+    
+    .product-shop { 
+        grid-template-columns: 1fr; 
+    }
+    .container-view2-shop { 
+        width: 95%; 
+    }
+    .card img { 
+        height: 15rem; 
+    }
+
+    
+    .pagination { 
+        gap: 0.5rem; 
+        margin-top: 2rem; 
+    }
+    .page-btn {
+        width: 2.2rem; height: 2.2rem;
+        font-size: 0.9rem;
+    }
+    .page-btn.next { 
+        width: 4rem; 
+    }
+
+ 
+    .features-section { 
+        padding: 2.5rem 0; 
+    }
+    .features-container {
+        grid-template-columns: 1fr;
+        width: 90%;
+        gap: 1.5rem;
+    }
+    .feature-item { 
+        justify-content: flex-start; 
+    } 
+    .feature-icon { 
+        font-size: 1.8rem; 
+    }
+    .feature-text h3 { 
+        font-size: 1.1rem; 
+    }
+}

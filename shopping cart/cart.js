@@ -26,12 +26,6 @@ function loadCartItems() {
     const tableBody = document.getElementById('cart-table-body');
     if (!tableBody) return;
     const items = window.CartService.getItems();
-
-    if (items.length === 0) {
-        showEmptyCart();
-        return;
-    }
-
     let html = '';
     items.forEach(item => {
         const subtotal = item.price * item.quantity;
