@@ -5,6 +5,10 @@
     --button-hover: #e8d2a9;
     --button-medium-hover: #7C6838;
     --background-color: #FFEFD5;
+    --bg-light: #F9F1E7;      
+    --text-main: #3A3A3A;
+    --text-gray: #898989;
+    --white: #FFFFFF;
 }
 * {
     margin: 0;

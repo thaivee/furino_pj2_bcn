@@ -1,68 +1,25 @@
 document.addEventListener("DOMContentLoaded", () => {
+    const buyNowBtn = document.querySelector('.description button');
+    const viewMoreBtn = document.querySelector('.button-viewmore');
+   
+    const exploreMoreBtn = document.querySelector('.button-explore');
 
-    const slider = document.getElementById('slider-view4');
-    const nextBtn = document.getElementById('next-btn-view4');
-    const dots = document.querySelectorAll('#dots-container-view4 .dot');
-    const cards = document.querySelectorAll('.slide-card');
+    const goToShop = () => {
+        window.location.href = '/shop/shop.html';
+    };
 
-    if (slider && nextBtn) {
-        nextBtn.addEventListener('click', () => {
-            const scrollAmount = cards[0].offsetWidth + 24;
-            slider.scrollLeft += scrollAmount;
+    if (buyNowBtn) buyNowBtn.addEventListener('click', goToShop);
+    if (viewMoreBtn) viewMoreBtn.addEventListener('click', goToShop);
+    if (exploreMoreBtn) exploreMoreBtn.addEventListener('click', goToShop);
+    const productCards = document.querySelectorAll('.card, .card-sale, .card-new');
 
-            if (slider.scrollLeft + slider.offsetWidth >= slider.scrollWidth - 10) {
-                slider.scrollLeft = 0;
+    productCards.forEach(card => {
+        card.style.cursor = 'pointer';
+        card.addEventListener('click', (e) => {
+            const isAction = e.target.closest('button') || e.target.closest('.action a');
+            if (!isAction) {
+                window.location.href = './product/single-product.html';
             }
         });
-
-      
-        dots.forEach((dot, index) => {
-            dot.addEventListener('click', () => {
-                const scrollAmount = cards[0].offsetWidth + 24;
-                slider.scrollLeft = index * scrollAmount;
-            });
-        });
-
-        slider.addEventListener('scroll', () => {
-            const scrollAmount = cards[0].offsetWidth + 24;
-            const currentIndex = Math.round(slider.scrollLeft / scrollAmount);
-            dots.forEach(d => d.classList.remove('active'));
-            if (dots[currentIndex]) dots[currentIndex].classList.add('active');
-        });
-
-        let isDown = false;
-        let startX;
-        let scrollLeftPos;
-
-        slider.addEventListener('mousedown', (e) => {
-            isDown = true;
-            slider.style.cursor = 'grabbing';
-            startX = e.pageX - slider.offsetLeft;
-            scrollLeftPos = slider.scrollLeft;
-        });
-
-        slider.addEventListener('mouseleave', () => { isDown = false; slider.style.cursor = 'grab'; });
-        slider.addEventListener('mouseup', () => { isDown = false; slider.style.cursor = 'grab'; });
-
-        slider.addEventListener('mousemove', (e) => {
-            if (!isDown) return;
-            e.preventDefault();
-            const x = e.pageX - slider.offsetLeft;
-            const walk = (x - startX) * 2; 
-            slider.scrollLeft = scrollLeftPos - walk;
-        });
-    }
-
-    const galleryTrack = document.getElementById('gallery-track-view5');
-    if (galleryTrack) {
-        galleryTrack.addEventListener('mouseenter', () => {
-            galleryTrack.style.animationPlayState = 'paused';
-        });
-        galleryTrack.addEventListener('mouseleave', () => {
-            galleryTrack.style.animationPlayState = 'running';
-        });
-    }
-
-
-    
+    });
 });
