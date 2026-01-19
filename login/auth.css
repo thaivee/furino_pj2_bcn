@@ -203,7 +203,7 @@ body {
 }
 
 .btn-submit:hover {
-    background-color: #9a7629;
+    background-color: #d8a837;
 }
 
 .auth-switch {
@@ -389,3 +389,113 @@ body {
     margin-bottom: 20px;
 }
 
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 5%;
+    }
+
+    .navbar ul {
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar .nav-icons {
+        gap: 20px;
+    }
+
+    .hero {
+        height: 250px;
+    }
+
+    .hero-content h1 {
+        font-size: 32px;
+    }
+
+    .auth-container {
+        margin: 40px auto;
+        padding: 0 15px;
+    }
+
+    .auth-wrapper {
+        padding: 25px;
+    }
+
+    .auth-form-container h2 {
+        font-size: 24px;
+    }
+
+    .form-options {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+
+    .profile-container {
+        margin: 40px auto;
+        padding: 0 15px;
+    }
+
+    .profile-header h2 {
+        font-size: 28px;
+    }
+
+    .profile-card {
+        padding: 25px;
+    }
+
+    .profile-avatar {
+        width: 80px;
+        height: 80px;
+    }
+
+    .profile-avatar i {
+        font-size: 40px;
+    }
+
+    .profile-info h3 {
+        font-size: 20px;
+    }
+
+    .profile-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .btn-secondary,
+    .btn-logout {
+        width: 100%;
+        text-align: center;
+    }
+
+    .detail-item {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .features {
+        flex-direction: column;
+        gap: 30px;
+        padding: 50px 5%;
+        align-items: center;
+    }
+
+    .feature-item {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .feature-item i {
+        font-size: 32px;
+    }
+
+    .feature-item h4 {
+        font-size: 16px;
+    }
+
+    .feature-item p {
+        font-size: 12px;
+    }
+}

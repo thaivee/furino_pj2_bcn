@@ -11,7 +11,8 @@ body {
     font-family: 'Poppins', sans-serif;
     
 }
-section{
+
+.footer{
     display: flex;
     justify-content: center;
     width: 100%;
@@ -25,16 +26,15 @@ section{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* background-color: FFEFD5; */
-    padding: 1rem 0;
+    padding: 4rem;
+    align-items: center;
 }
 
 .header-footer {
     display: flex;
     justify-content: space-between;
-    /* align-items: center; */
-    gap: 3rem;
-
+    align-items: center;
+    gap: 5rem;
 }
 
 
@@ -80,10 +80,6 @@ section{
     flex-direction: column;
     
 }
-/* .newsletter{
-    max-height: 100%;
-    align-self: center;
-} */
 
 .links p, .help p, .newsletter p {
     color: #9F9F9F;

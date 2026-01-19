@@ -19,8 +19,9 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0.5rem 0;
+    padding: 2.5rem ;
 }
+
 .header{
     background-color: var(--background-color);
     min-width: 100%;
@@ -30,6 +31,7 @@ body{
     padding: 0.5rem 0;
 
 }
+
 .logo{
     width: fit-content;
     min-height: 2.5rem;
@@ -57,13 +59,11 @@ body{
     width: fit-content;
     height: fit-content;
     display: flex;
-    /* gap:0.5rem; */
 }
 
 .button{
     width: 4.5rem;
     min-height: 2.5rem;
-    /* background-color: 	#E9967A; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -132,7 +132,7 @@ body{
     transition: all 0.3s ease;
 }
 
-.button:active, .button-medium:active {
+.button:active {
     transform: translateY(0);
     box-shadow: none;
 }

@@ -70,8 +70,7 @@ export function getCurrentUser() {
 }
 
 /**
- * Handles user icon click - redirects to profile if logged in, otherwise to login
- * @param {string} basePath - The relative path to the login folder (e.g., 'login/' or '../login/')
+ * @param {string} basePath
  */
 export function handleUserIconClick(basePath = 'login/') {
     if (isUserLoggedIn()) {
@@ -145,12 +144,18 @@ loginForm.addEventListener('submit', async (e) => {
 
         if (errorCode === 'auth/user-not-found') {
             errorMessage = 'No account found with this email.';
+            alert(errorMessage);
         } else if (errorCode === 'auth/wrong-password') {
             errorMessage = 'Incorrect password.';
+            alert(errorMessage);
         } else if (errorCode === 'auth/invalid-email') {
             errorMessage = 'Invalid email address.';
+            alert(errorMessage);
         } else if (errorCode === 'auth/invalid-credential') {
             errorMessage = 'Invalid email or password.';
+            alert(errorMessage);
+        } else {
+            alert(errorMessage);
         }
 
         loginError.textContent = errorMessage;
