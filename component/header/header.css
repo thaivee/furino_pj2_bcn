@@ -1,5 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 
+:root{
+    --button: #B88E2F;
+    --button-hover: #e8d2a9;
+    --button-medium-hover: #7C6838;
+    --background-color: #FFEFD5;
+    --bg-light: #F9F1E7;      
+    --text-main: #3A3A3A;
+    --text-gray: #898989;
+    --white: #FFFFFF;
+}
 * {
     margin: 0;
     padding: 0;
@@ -8,22 +18,22 @@
 body{
     font-family: 'Poppins', sans-serif;
 }
-.header-container{
-    min-width: 100%;
+.container{
+    width: 80%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 2.5rem ;
+    padding: 0.5rem 0;
 }
-
 .header{
-    background-color: #FFEFD5;
+    background-color: var(--background-color);
     min-width: 100%;
     height: fit-content;
     display: flex;
     justify-content: center;
-}
+    padding: 0.5rem 0;
 
+}
 .logo{
     width: fit-content;
     min-height: 2.5rem;
@@ -40,7 +50,6 @@ body{
 
 .logo-text{
     text-decoration: none;
-    font-family: sans-serif;
     font-weight: 750;
     font-size: 25;
     color: #000000;
@@ -52,11 +61,13 @@ body{
     width: fit-content;
     height: fit-content;
     display: flex;
+    /* gap:0.5rem; */
 }
 
 .button{
     width: 4.5rem;
     min-height: 2.5rem;
+    /* background-color: 	#E9967A; */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -64,9 +75,8 @@ body{
     justify-content: center;
     align-items: center;
     text-decoration: none;
-    font-size: 15;
-    font-family: 'Poppins', sans-serif;
     font-weight: 400;
+    /* color: #F5FFFA; */
     color:#000000;
     cursor: pointer;
 }
@@ -74,18 +84,17 @@ body{
 .button-medium{
     width: 5.5rem;
     min-height: 2.5rem;
-    background-color: 	#E9967A;
+    background-color: var(--button);
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-radius: 30px;
     justify-content: center;
     align-items: center;
-    text-decoration: none;
-    font-size: 12;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    color: #000000;
+    border: none;
+    font-size: 15;
+    font-weight: 200;
+    color: #F5FFFA;
     cursor: pointer;
 }
 
@@ -114,14 +123,20 @@ body{
 
 
 .button:hover{
-    background-color: #e8b7a7;
+    background-color: var(--button-hover);
 
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     color: #000000;
     transition: all 0.3s ease;
 }
+.button-medium:hover{
+    background-color: var(--button-medium-hover);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    color: #ffffff;
+    transition: all 0.3s ease;
+}
 
-.button:active {
+.button:active, .button-medium:active {
     transform: translateY(0);
     box-shadow: none;
 }
@@ -130,8 +145,10 @@ body{
     background-color: rgba(0, 0, 0, 0.05);
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
     color: #000000;
+    
 }
 
+<<<<<<< HEAD
 .mobile-menu-btn {
     display: none;
     flex-direction: column;
@@ -242,24 +259,33 @@ body{
 @media (max-width: 480px) {
     .header-container {
         padding: 0.75rem 1rem;
+=======
+@media (max-width: 1024px) {
+    .container {
+        width: 95%;
+>>>>>>> 037bc39ab56887fd3fa353a7d40e0b7e4dd5320d
     }
 
     .logo-text {
-        font-size: 18px;
+        font-size: 1.25rem;
     }
 
     .logo-text img {
-        width: 2rem;
-        height: 2rem;
+        width: 2.5rem;
+        height: 2.5rem;
     }
 
-    .action {
-        gap: 0;
+    .nav {
+        gap: 0.2rem;
     }
 
-    .icon {
-        width: 1.75rem;
-        height: 1.75rem;
-        font-size: 0.9rem;
+    .button {
+        width: 4rem;
+        font-size: 14px;
+    }
+
+    .button-medium {
+        width: 5rem;
+        font-size: 14px;
     }
 }

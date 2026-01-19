@@ -1,6 +1,5 @@
-function loadHeader(basePath = '') {
-    const headerPath = basePath ? `${basePath}/component/header/header.html` : './header/header.html';
-    fetch(headerPath)
+document.addEventListener("DOMContentLoaded", () => {
+    fetch('/component/header/header.html')
         .then(response => {
             if (!response.ok) throw new Error("Error loading header");
             return response.text();
@@ -13,7 +12,16 @@ function loadHeader(basePath = '') {
             }
         })
         .catch(error => console.error(error));
-}
+
+
+    const scripts = document.querySelectorAll('script[data-header-base]');
+    if (scripts.length > 0) {
+        const basePath = scripts[scripts.length - 1].getAttribute('data-header-base');
+        if (typeof loadHeader === 'function') {
+            loadHeader(basePath);
+        }
+    }
+});
 
 function initMobileMenu() {
     const menuBtn = document.getElementById('mobile-menu-btn');
@@ -41,11 +49,3 @@ function initMobileMenu() {
         });
     }
 }
-
-document.addEventListener("DOMContentLoaded", () => {
-    const scripts = document.querySelectorAll('script[data-header-base]');
-    if (scripts.length > 0) {
-        const basePath = scripts[scripts.length - 1].getAttribute('data-header-base');
-        loadHeader(basePath);
-    }
-});
