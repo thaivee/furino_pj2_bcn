@@ -103,10 +103,7 @@ const CartService = {
     },
 
     getDefaultItems() {
-        return [
-            { id: 1, name: 'Asgaard sofa', price: 25000000, quantity: 1, image: '/img/syltherine.png' },
-            { id: 2, name: 'Casaliving Wood', price: 27000000, quantity: 1, image: '/img/lolito.png' }
-        ];
+        return [];
     },
 
     getItems() {

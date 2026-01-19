@@ -1,0 +1,216 @@
+@keyframes slideInRight {
+    from {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutRight {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(400px);
+        opacity: 0;
+    }
+}
+
+@keyframes slideInDown {
+    from {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideOutUp {
+    from {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+}
+
+#add-to-cart-notification {
+    animation: slideInRight 0.3s ease-in-out !important;
+}
+
+.limit-notification {
+    position: fixed;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #FF6B6B;
+    color: white;
+    padding: 16px 24px;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(255, 107, 107, 0.3);
+    z-index: 10001;
+    font-size: 14px;
+    font-weight: 500;
+    animation: slideInDown 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: 500px;
+    word-wrap: break-word;
+}
+
+.limit-notification-content {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.limit-notification i {
+    font-size: 18px;
+    flex-shrink: 0;
+}
+
+.limit-notification.fadeOut {
+    animation: slideOutUp 0.3s ease-in-out;
+}
+
+@media (max-width: 600px) {
+    .limit-notification {
+        left: 10px;
+        right: 10px;
+        transform: none;
+        max-width: none;
+    }
+}
+
+.login-required-notification {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    color: #333;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+    z-index: 10002;
+    font-size: 14px;
+    animation: slideInRight 0.3s ease-in-out;
+    max-width: 480px;
+    width: 90%;
+}
+
+.login-notification-content {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    position: relative;
+}
+
+.login-notification-content i {
+    font-size: 24px;
+    color: #B88E2F;
+    margin-top: -2px;
+    padding-right: 8px;
+}
+
+.login-notification-text {
+    flex: 1;
+}
+
+.login-message {
+    margin: 0 0 12px 0;
+    font-size: 15px;
+    font-weight: 500;
+    color: #333;
+}
+
+.login-notification-buttons {
+    display: flex;
+    gap: 10px;
+    padding-top: 6px;
+}
+
+.login-btn, .signup-btn {
+    flex: 1;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.login-btn {
+    background-color: #B88E2F;
+    color: white;
+}
+
+.login-btn:hover {
+    background-color: #7C6838;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(184, 142, 47, 0.3);
+}
+
+.signup-btn {
+    background-color: #f5f5f5;
+    color: #B88E2F;
+    border: 1px solid #B88E2F;
+}
+
+.signup-btn:hover {
+    background-color: #fff9f0;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(184, 142, 47, 0.2);
+}
+
+.login-notification-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: #999;
+    cursor: pointer;
+    padding: 4px 8px;
+    transition: color 0.2s ease;
+}
+
+.login-notification-close:hover {
+    color: #B88E2F;
+}
+
+.login-required-notification.fadeOut {
+    animation: slideOutUp 0.3s ease-in-out;
+}
+
+@media (max-width: 600px) {
+    .login-required-notification {
+        max-width: 100%;
+        width: 85%;
+        padding: 20px;
+    }
+
+    .login-notification-buttons {
+        flex-direction: column;
+    }
+
+    .login-btn,
+    .signup-btn {
+        width: 100%;
+    }
+}
