@@ -187,7 +187,6 @@ body {
 
 .container-view2-shop {
     width: 80%;
-    
     margin: 0 auto;
 }
 
@@ -384,9 +383,7 @@ body {
     }
 
 
-    .toolbar-container, .container-view2-shop, .features-container {
-        max-width: 90%; 
-    }
+
     
     .search-wrapper { 
         max-width: 20rem; 
@@ -426,9 +423,7 @@ body {
 
 
 
-    .container-view2-shop {
-        width: 90%;
-    }
+
 
     .product-shop {
         grid-template-columns: repeat(2, 1fr);
@@ -518,12 +513,7 @@ body {
     }
 
     
-    /* .product-shop { 
-        grid-template-columns: 1fr; 
-    } */
-    .container-view2-shop { 
-        width: 95%; 
-    }
+
     .card img { 
         height: 15rem; 
     }
