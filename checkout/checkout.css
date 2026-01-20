@@ -336,6 +336,7 @@ body {
     }
 
     .checkout-container {
+        max-width: 100%;
         margin: 40px auto;
         padding: 0 15px;
     }
@@ -354,9 +355,25 @@ body {
         gap: 0;
     }
 
+    .form-group label {
+        font-size: 14px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        padding: 12px;
+        font-size: 13px;
+    }
+
     .order-summary {
         padding: 20px;
         border-top: 1px solid #eee;
+    }
+
+    .order-header {
+        font-size: 16px;
+        gap: 20px;
     }
 
     .order-row .total-price {
@@ -365,6 +382,8 @@ body {
 
     .btn-place-order {
         max-width: 100%;
+        padding: 12px 30px;
+        font-size: 14px;
     }
 
     .features {

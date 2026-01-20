@@ -407,7 +407,109 @@ body {
     }
 }
 
-@media (max-width: 22.5rem) {
+@media (max-width: 768px) {
+    .view1-shop {
+        padding: 3rem 0;
+    }
+
+    .view1-shop h1 {
+        font-size: 2.5rem;
+    }
+
+    .toolbar-container {
+        width: 90%;
+        flex-wrap: wrap;
+        gap: 1rem;
+    }
+
+    .toolbar-left {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .toolbar-right {
+        flex-direction: column;
+        width: 100%;
+        gap: 1rem;
+    }
+
+    .search-wrapper {
+        width: 100%;
+    }
+
+    .search-box {
+        max-width: 100%;
+    }
+
+    .container-view2-shop {
+        width: 90%;
+    }
+
+    .product-shop {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .card, .card-sale, .card-new {
+        width: 100%;
+    }
+
+    .card img, .card-sale img, .card-new img {
+        height: 15rem;
+    }
+
+    .in4 h5 {
+        font-size: 1.25rem;
+    }
+
+    .in4 p {
+        font-size: 0.95rem;
+    }
+
+    .circle {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .pagination {
+        gap: 1rem;
+        margin-top: 2rem;
+    }
+
+    .page-btn {
+        width: 3rem;
+        height: 3rem;
+        font-size: 1rem;
+    }
+
+    .page-btn.next {
+        width: 5rem;
+    }
+
+    .features-section {
+        padding: 3rem 0;
+    }
+
+    .features-container {
+        width: 90%;
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .feature-item {
+        justify-content: center;
+        text-align: center;
+    }
+
+    .feature-text h3 {
+        font-size: 1rem;
+    }
+
+    .feature-text p {
+        font-size: 0.9rem;
+    }
+}
    
     .view1-shop { 
         padding: 2.5rem 0; 

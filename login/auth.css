@@ -468,6 +468,7 @@ body {
     .btn-logout {
         width: 100%;
         text-align: center;
+        font-size: 13px;
     }
 
     .detail-item {
@@ -483,8 +484,7 @@ body {
     }
 
     .feature-item {
-        width: 100%;
-        max-width: 300px;
+        width: 100%;\n        max-width: 300px;
     }
 
     .feature-item i {

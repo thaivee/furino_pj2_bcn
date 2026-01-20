@@ -181,7 +181,7 @@ body{
     transform: rotate(-45deg) translate(5px, -6px);
 }
 
-@media (max-width: 992px) {
+@media (max-width: 1024px) {
     .header-container {
         padding: 1.5rem 2rem;
     }
@@ -198,6 +198,14 @@ body{
 }
 
 @media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .header {
+        min-width: 100%;
+    }
+
     .header-container {
         padding: 1rem 1.5rem;
         flex-wrap: wrap;
@@ -242,16 +250,31 @@ body{
         justify-content: center;
         padding: 0.75rem 1rem;
         border-radius: 0;
+        font-size: 14px;
     }
 
     .button:hover {
         border-radius: 0;
     }
 
+    .button-medium {
+        width: 100%;
+        font-size: 14px;
+    }
+
     .icon {
         width: 2rem;
         height: 2rem;
         font-size: 1rem;
+    }
+
+    .logo-text {
+        font-size: 1.25rem;
+    }
+
+    .logo-text img {
+        width: 2.5rem;
+        height: 2.5rem;
     }
 }
 
@@ -282,4 +305,5 @@ body{
         width: 5rem;
         font-size: 14px;
     }
+    
 }

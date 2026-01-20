@@ -684,6 +684,128 @@ body {
 }
 
 
+@media (max-width: 768px) {
+    .view1 {
+        min-height: 30rem;
+        padding: 2rem 0;
+    }
+
+    .container-view1 {
+        justify-content: center;
+        width: 95%;
+    }
+
+    .description {
+        width: 100%;
+        padding: 2rem;
+    }
+
+    .line2 {
+        font-size: 2.5rem;
+    }
+
+    .view2 {
+        padding: 1.5rem 0;
+    }
+
+    .container-view2 {
+        width: 90%;
+    }
+
+    .description1 h3 {
+        font-size: 1.5rem;
+    }
+
+    .classification {
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .view3 {
+        padding: 1.5rem 0;
+    }
+
+    .container-view3 {
+        width: 90%;
+    }
+
+    .text h3 {
+        font-size: 2rem;
+    }
+
+    .product {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+    }
+
+    .card, .card-sale, .card-new {
+        width: 100%;
+    }
+
+    .card img, .card-sale img, .card-new img {
+        height: 12rem;
+    }
+
+    .in4 h5 {
+        font-size: 1.25rem;
+    }
+
+    .circle {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+
+    .container-view4 {
+        max-width: 90%;
+        gap: 1.5rem;
+    }
+
+    .inspiration-text {
+        flex: 1;
+    }
+
+    .inspiration-text h3 {
+        font-size: 2rem;
+    }
+
+    .slide-card img {
+        height: 25rem;
+    }
+
+    .header-view5 h3 {
+        font-size: 2rem;
+    }
+
+    .view5-container {
+        width: 95%;
+    }
+
+    .gallery-track {
+        animation: none;
+    }
+
+    .gallery-col {
+        min-width: 100%;
+    }
+
+    .img-top-left {
+        width: 100%;
+        height: 15rem !important;
+    }
+
+    .img-bottom-left {
+        width: 100%;
+    }
+
+    .img-top-right {
+        width: 100%;
+    }
+
+    .img-bottom-right {
+        width: 100%;
+    }
+}
+
 @media (max-width: 22.5rem) {
     .view1 {
         justify-content: center;

@@ -81,15 +81,14 @@ body {
 }
 
 .links, .help, .newsletter {
-    min-width: 5rem;
     display: flex;
     flex-direction: column;
     
 }
-/* .newsletter{
+.newsletter{
     max-height: 100%;
     align-self: center;
-} */
+}
 
 .links p, .help p, .newsletter p {
     color: #9F9F9F;
@@ -106,12 +105,6 @@ body {
     margin-bottom: 2rem;
     transition: color 0.3s;
 }
-
-
-/* .newsletter{
-    max-height: 100%;
-    align-self: center;
-} */
 
 .links p, .help p, .newsletter p {
     color: #9F9F9F;
@@ -179,24 +172,30 @@ p:last-child {
 
 /* responsive */
 
-@media (max-width: 64rem) {
+@media (max-width: 768px) {
     .container-footer {
         width: 90%;
     }
 
     .information {
-        gap: 2rem;
+        gap: 1.5rem;
+        flex-direction: column;
     }
 
     .footer-nav {
-        gap: 1.5rem;
+        gap: 1rem;
+        flex-direction: column;
     }
 
     .logo-address {
-        max-width: 14rem;
+        max-width: 100%;
+    }
+
+    .links, .help, .newsletter {
+        width: 100%;
+        display: flex;
     }
 }
-
 
 @media (max-width: 22.5rem) {
     .container-footer {
@@ -221,6 +220,8 @@ p:last-child {
 
     .links, .help, .newsletter {
         align-items: center;
+        display: flex;
+        flex-direction: column;
     }
 
     .newsletter form {
