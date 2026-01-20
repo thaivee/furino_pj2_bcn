@@ -10,8 +10,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let isAsc = true;
 
     const renderProducts = (list) => {
-        let showCount = parseInt(showInput.value) || 16;
-        if (showCount > 16) showCount = 16;
+        let showCount = parseInt(showInput.value) || 8;
+        if (showCount > 8) showCount = 8;
         if (showCount < 1) showCount = 1;
 
         const limitedList = list.slice(0, showCount);
@@ -57,7 +57,7 @@ document.addEventListener("DOMContentLoaded", () => {
     };
 
     showInput.addEventListener('input', () => {
-        if (showInput.value > 12) showInput.value = 12;
+        if (showInput.value > 8 || showInput.value <= 0) showInput.value = 8;
         renderProducts(currentProducts);
     });
 

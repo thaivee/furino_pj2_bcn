@@ -6,6 +6,33 @@ document.addEventListener("DOMContentLoaded", () => {
         renderProducts(window.products);
     }
 
+    const buyNowBtn = document.querySelector('.description button');
+
+    if (buyNowBtn) {
+        buyNowBtn.addEventListener('click', () => {
+            window.location.href = './shop/shop.html'; 
+        });
+        buyNowBtn.style.cursor = 'pointer';
+    }
+
+    const viewMoreBtn = document.querySelector('.button-viewmore');
+
+    if (viewMoreBtn) {
+        viewMoreBtn.addEventListener('click', () => {
+            window.location.href = './shop/shop.html'; 
+        });
+        viewMoreBtn.style.cursor = 'pointer';
+    }
+
+    const exploreBtn = document.querySelector('.button-explore');
+
+    if (exploreBtn) {
+        exploreBtn.addEventListener('click', () => {
+            window.location.href = './shop/shop.html'; 
+        });
+        exploreBtn.style.cursor = 'pointer';
+    }
+
     const slider = document.getElementById('slider-view4');
     const nextBtn = document.getElementById('next-btn-view4');
     const dots = document.querySelectorAll('#dots-container-view4 .dot');
